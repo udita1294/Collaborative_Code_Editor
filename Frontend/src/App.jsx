@@ -31,12 +31,7 @@ function App() {
 
   // Provider 
   const provider = useMemo(() => {
-    return new SocketIOProvider(
-      "http://localhost:3000",
-      "monaco",
-      ydoc,
-      { autoConnect: true }
-    );
+    return new SocketIOProvider("/","monaco",ydoc,{ autoConnect: true });
   }, [ydoc]);
 
   // Bind editor
